@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="title">
+    <p class="text-title">Crop Recommendation</p>
+</div>
+<div class="container-fluid">
+    <div class="select-file">
+        <!-- <div class="col-auto">
+            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        </div>
+        <div class="col-auto button">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div> -->
+        <!-- <div class="input-group">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            <button class="btn" type="button" id="inputGroupFileAddon04">Send</button>
+        </div> -->
+        <!-- <div class="custom-file">
+            <form method="POST" action="" enctype="multipart/form-data">
+                <input type="file" class="custom-file-input btn" id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile" data-browse="Browse">Select image... </label>
+            </form>
+        </div> -->
+        <form method="POST" class='form-content'>
+            {{form.hidden_tag()}}
+            <div class="input-group">
+                    
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label for="humidity" class="form-label">Humidity</label>
+                            <div class="col-sm-10">
+                                {{form.humidity(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="temperature" class="form-label">Temperature</label>
+                            <div class="col-sm-10">
+                                {{form.temperature(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="rainfall" class="form-label">Rainfall</label>
+                            <div class="col-sm-10">
+                                {{form.rainfall(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="pH" class="form-label">pH</label>
+                            <div class="col-sm-10">
+                                {{form.pH(class="form-control")}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label for="nitrogen" class="form-label">Nitrogen</label>
+                            <div class="col-sm-10">
+                                {{form.n(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="nitrogen" class="form-label">Phosporus</label>
+                            <div class="col-sm-10">
+                                {{form.p(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="potassium" class="form-label">Potassium</label>
+                            <div class="col-sm-10">
+                                {{form.k(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="potassium" class="form-label">   </label>
+                            <div class="col-sm-10">
+                                {{form.submit(class="btn")}}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+{% endblock %}
